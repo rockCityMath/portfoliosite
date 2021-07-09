@@ -2,14 +2,90 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <title>Portfolio</title>
+        <title>Zachary Scott</title>
+
+        <!-- Handles the opening of menu on mobile-->
+        <style>
+            #menu-toggle:checked + #menu {
+                display: inline;
+                background-color: rgba(0, 0, 0, 0.41);
+                min-width: 100vw;
+                color: black;
+                padding: 10px;
+                transform: translatex(-2rem);
+                transition: 1s;
+                margin-top: 2.1rem;
+                padding-left: 2rem;
+                
+            }
+            #semicircle {
+                width: 6rem;
+                height: 12rem;
+                background-image: linear-gradient(to right top, #553900, #6a4b0e, #7f5d1c, #94702a, #aa8438);
+                border-top-left-radius: 0;
+                border-top-right-radius: 10rem;
+                border-bottom-right-radius: 10rem;
+                border-bottom-left-radius: 0;
+                display: inline-block;
+                z-index: -2;
+            }
+        </style>
+
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+
     </head>
-    <body>
+    <body class="antialiased" style="height: 200vh; background-image: linear-gradient(to left bottom, #2e4172, #2a355c, #252a47, #1e2033, #161620, #13111d, #0e0b19, #090416, #0e051f, #110628, #120731, #13073a);">
         
-        <!-- SVG will go inside a div with clear/transparent background, diff on phone, figure out resize -->
-        <svg height="2100" width="4000">
-            <path d="M150 0 L75 200 L225 200 Z" />
-        </svg>
+        <!-- START NAVBAR -->
+        <header class = "lg:px-16 px-6 flex flex-wrap items-center lg:py-0 py-2 mb-12 fixed w-full h-20 z-10" style="background: rgba(0, 0, 0, 0.41)" >
+            <div class="flex-1 flex justify-between items-center" style="opacity: 100%">
+                <a href ="#" class="font-nunito tracking-wider text-white text-xl font-bold pt-2"> <svg class="float-left mx-5" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12.89 1.45l8 4A2 2 0 0 1 22 7.24v9.53a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.79 0l-8-4a2 2 0 0 1-1.1-1.8V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.78 0z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><polyline fill="none" points="2.32 6.16 12 11 21.68 6.16" stroke="fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line fill="none" stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="22.76" y2="11"/></svg>Zachary Scott</a>
+            </div>
+                <label for="menu-toggle" class="cursor-pointer lg:hidden block">
+                    <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+                </label>
+                <input type="checkbox" class="hidden" id="menu-toggle">
+
+                <div class="hidden lg:flex lg:items-center lg:w-auto w-full font-nunito font-bold" id="menu">
+                    <nav>
+                        <ul class="lg:flex items-center justify-between text-base text-white pt-4 lg:pt-2 lg:px-15 tracking-wider">
+                            <li>
+                                <a href="#" class="lg:px-6 text-white py-1 px-0 block border-b-2 border-transparent transition duration-150 ease-in-out transform lg:hover:scale-110 hover:border-goldenBrown lg:bg-goldenBrown lg:rounded-full">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="lg:px-12 text-white py-3 px-0 block border-b-2 border-transparent transition duration-150 ease-in-out hover:border-goldenBrown transform lg:hover:scale-110">About</a>
+                            </li>
+                            <li>
+                                <a href="#" class="lg:px-12 text-white py-3 px-0 block border-b-2 border-transparent transition duration-150 ease-in-out hover:border-goldenBrown transform lg:hover:scale-110">Work</a>
+                            </li>
+                            <li>
+                                <a href="#" class="lg:px-12 text-white py-3 px-0 block border-b-2 border-transparent transition duration-150 ease-in-out hover:border-goldenBrown transform lg:hover:scale-110">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- END NAVBAR -->
+
+        <!-- START BODY -->
+        <div class=" pt-24" style="height: 100vh;">
+            <div id="semicircle" class="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-150"></div>
+            <div class="max-w-3xl rounded-lg mx-24 text-white font-nunito inline-block">
+                <h1 class="text-5xl font-bold mb-0 tracking-wide lg:pt-56 pt-12">Who I am</h1>
+                <div class="bg-goldenBrown rounded-full px-3 h-2 w-10 mt-0"></div>
+
+                <div class="font-nunito mt-5 text-3xl font-light leading-tight tracking-wider">My name is Zach, I am currently attending the university of North Texas a pursuing a major in computer science and a minor in mathematics.</div>
+
+            </div>
+            <div class=" lg:px-48 px-24 py-10">
+                <a href="#" class="bg-secondPurple rounded-full px-10 py-2 font-nunito text-white tracking-wider hover:bg-deepPurple">See my work</a>
+            </div>
+
+        </div>
+        <!-- END BODY -->
+        
+        
         
 
     </body>
